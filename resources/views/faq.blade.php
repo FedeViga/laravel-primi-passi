@@ -34,10 +34,26 @@
         </div>
       </nav>
 
-    <div class="container text-center">
-        <h1 class="py-3">
-            F.A.Q.
-        </h1>
+    <div class="container">
+        <header class="text-center">
+            <h1 class="py-3">
+                F.A.Q.
+            </h1>
+        </header>
+        <main>
+            <ul data-bs-theme="dark" class="list-group">
+                @foreach($faqs as $currentFaq)
+                    <li class="list-group-item">
+                        <h4>
+                            {{$currentFaq}}
+                        </h4>
+                        <p class="ps-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At eaque, voluptatum quos, iste itaque nemo, facere fugit voluptate officia veniam ad recusandae distinctio molestiae vel sapiente atque autem? Placeat, reiciendis!
+                        </p>
+                    </li>
+                @endforeach
+            </ul>
+        </main>
     </div>
 
 

@@ -34,10 +34,29 @@
         </div>
       </nav>
 
-    <div class="container text-center">
-        <h1 class="py-3">
-            Home
-        </h1>
+    <div class="container">
+        <header class="text-center pb-5">
+            <h1 class="py-3">
+                Home
+            </h1>
+            <h2>
+                {{$welcome}}
+            </h2>
+        </header>
+        <main>
+            <h3 class="mb-4">
+                Cosa puoi fare con la nostra Web App:
+            </h3>
+            <ul data-bs-theme="dark" class="list-group col-12 col-md-6">
+                @foreach($features as $currentFeature)
+                    <li class="list-group-item">
+                        <h4>
+                            {{$currentFeature}}
+                        </h4>
+                    </li>
+                @endforeach
+            </ul>
+        </main>
     </div>
 
 
